@@ -49,8 +49,15 @@
 
                     <!--First Master Page, Patrick.master, shall contain a means to navigate to page1.aspx, page2.aspx and
                     page3.aspx (three of the four pages). #ps-->
-                    <a class="navbar-brand" runat="server" href="~/page1.aspx">INFO 451-002 Assignment 4</a>
+
+                    <a class="navbar-brand" runat="server" href="~/page1.aspx">
+                        <asp:Image ID="imgLogo" ImageUrl="~/PotCLogo.PNG" AlternateText="Website Logo" runat="server" Width="134px" Height="65px" />
+                        <br />
+                        INFO 451-002 Assignment 4</a><br />
+                    <br />
+                    &nbsp;
                 </div>
+
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/page1.aspx">Page 1</a></li>
@@ -74,6 +81,7 @@
                         </LoggedInTemplate>
                     </asp:LoginView>
                 </div>
+
             </div>
         </div>
         <div class="container body-content">
