@@ -9,8 +9,8 @@
 
     <!--Page4.aspx functionality:
         o An option that uses the selected value from the DropDownList control to display all columns of the selected record.-->
-        <label>Product ID:</label>
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="PRODUCT_ID" 
+        <label>Select Product:</label>
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="PRODUCT_NAME" 
             DataValueField="PRODUCT_ID"></asp:DropDownList>
 
 

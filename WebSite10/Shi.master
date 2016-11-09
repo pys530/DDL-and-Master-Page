@@ -50,7 +50,7 @@
                     <!--Second Master Page, Shi.master, shall contain a means to navigate to page3.aspx and
                     page4.aspx (two of the four pages). #ps-->
                     <a class="navbar-brand" runat="server" href="~/page1.aspx">
-                        <asp:Image ID="imgLogo" ImageUrl="~/PotCLogo.PNG" AlternateText="Website Logo" runat="server" Width="134px" Height="65px" />
+                        <asp:Image ID="imgLogo" ImageUrl="~/PotCLogoAlt.PNG" AlternateText="Website Logo" runat="server" Width="134px" Height="65px" />
                         <br />
                         INFO 451-002 Assignment 4</a><br />
                     <br />&nbsp;</div>

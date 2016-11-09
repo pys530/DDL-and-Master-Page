@@ -7,9 +7,9 @@
         <p class="lead">Page should contain a DropDownList with its options’ values and text populated from two fields in Product table. 
             Option values should be set to the value of the primary key from the table. DDL should be sorted by text field.</p>
 
-        <label>Product ID:</label>
+        <label>Select Product:</label>
 
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="PRODUCT_ID" 
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="PRODUCT_NAME" 
             DataValueField="PRODUCT_ID"></asp:DropDownList>
 
         <br />
