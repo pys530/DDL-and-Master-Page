@@ -60,6 +60,20 @@
                         <li><a runat="server" href="~/page3.aspx">Page 3</a></li>
                         <li><a runat="server" href="~/page4.aspx">Page 4</a></li>
                     </ul>
+
+                    <%--<asp:Menu ID="Menu1" runat="server">
+                        <Items>
+                            <asp:MenuItem
+                                Text="Page 3"
+                                NavigateURL="~/page3.aspx"/>
+                            <asp:MenuItem
+                                Text="Page 4"
+                                NavigateUrl="~/page4.aspx">
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>--%>
+
+
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
