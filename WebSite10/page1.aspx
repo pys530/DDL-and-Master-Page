@@ -8,9 +8,16 @@
         <p class="lead">Page should contain a DropDownList with its options’ values and text populated from two fields in Product table. 
             Option values should be set to the value of the primary key from the table. DDL should be sorted by text field.</p>
 
-        <label>Product ID:</label>
-        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="PRODUCT_ID" 
-            DataValueField="PRODUCT_ID"></asp:DropDownList>
+        <label>Select Product:</label>
+        <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="PRODUCT_NAME" 
+            DataValueField="PRODUCT_ID">
+            <asp:ListItem Enabled="true" Text="Select Product" Value="-1"></asp:ListItem>
+            <asp:ListItem Text="Blue Adult Dog Food" Value="1"></asp:ListItem>
+            <asp:ListItem Text="KONG Classic Dog Toy" Value="2"></asp:ListItem>
+            <asp:ListItem>Simply Nourish Adult Dog Food</asp:ListItem>
+            <asp:ListItem>Southeast Life Sing Door Folding Dog Crate</asp:ListItem>
+            <asp:ListItem>Top Paw Dog Bowl</asp:ListItem>
+        </asp:DropDownList>
         
 
         <br />
@@ -20,7 +27,7 @@
                 <asp:BoundField DataField="PRODUCT_NAME" HeaderText="PRODUCT_NAME" SortExpression="PRODUCT_NAME" />
             </Columns>
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=&quot;128.172.188.42, 14330&quot;;Initial Catalog=fall16_g3;Persist Security Info=True;User ID=fall16_g3;Password=Fallgrp3!" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [PRODUCT_ID], [PRODUCT_NAME] FROM [PRODUCT] ORDER BY [PRODUCT_NAME]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:fall16_g3ConnectionString2 %>" SelectCommand="SELECT [PRODUCT_ID], [PRODUCT_NAME] FROM [PRODUCT] ORDER BY [PRODUCT_NAME]"></asp:SqlDataSource>
 
 
 
