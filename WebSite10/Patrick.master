@@ -48,7 +48,7 @@
                     </button>
 
                     <!--First Master Page, Patrick.master, shall contain a means to navigate to page1.aspx, page2.aspx and
-                    page3.aspx (three of the four pages). #ps-->
+                    page3.aspx (three of the four pages). Main logo placed in navbar. #ps-->
 
                     <a class="navbar-brand" runat="server" href="~/page1.aspx">
                         <asp:Image ID="imgLogo" ImageUrl="~/PotCLogo.PNG" AlternateText="Website Logo" runat="server" Width="134px" Height="65px" />
@@ -86,6 +86,7 @@
         </div>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <link rel="stylesheet" href="~/StyleSheet.css" type="text/css" />
             </asp:ContentPlaceHolder>
             <hr />
             <footer>

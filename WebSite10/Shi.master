@@ -14,8 +14,12 @@
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
+    <asp:ContentPlaceHolder ID="Stylesheets" runat="server">
+        <link rel="stylesheet" href="StyleSheet.css" type="text/css" />
+    </asp:ContentPlaceHolder>
 </head>
 <body>
+
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -48,7 +52,7 @@
                     </button>
 
                     <!--Second Master Page, Shi.master, shall contain a means to navigate to page3.aspx and
-                    page4.aspx (two of the four pages). #ps-->
+                    page4.aspx (two of the four pages).  Alternative logo placed in navbar. #ps-->
                     <a class="navbar-brand" runat="server" href="~/page1.aspx">
                         <asp:Image ID="imgLogo" ImageUrl="~/PotCLogoAlt.PNG" AlternateText="Website Logo" runat="server" Width="134px" Height="65px" />
                         <br />
@@ -56,26 +60,41 @@
                     <br />&nbsp;</div>
 
                 <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/page3.aspx">Page 3</a></li>
-                        <li><a runat="server" href="~/page4.aspx">Page 4</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                    <%--Menu HyperLink example p.1022 to display simple vertical control #ps--%>
+                    <br /><br />
+                    <asp:Menu
+                        ID="Menu1"
+                        runat="server">
+                        <Items>
+                            <asp:MenuItem
+                                Text="Page 3"
+                                NavigateUrl="page3.aspx" />
+                            <asp:MenuItem
+                                Text="Page 4"
+                                NavigateUrl="page4.aspx">
+                       
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+
+                    <%--<asp:LoginView runat="server" ViewStateMode="Disabled">
+
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
                             </ul>
                         </AnonymousTemplate>
+
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
                                 <%--<li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>--%>
+                                </li>
                             </ul>
                         </LoggedInTemplate>
-                    </asp:LoginView>
+                    </asp:LoginView>--%>
                 </div>
             </div>
         </div>
